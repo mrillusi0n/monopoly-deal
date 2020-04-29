@@ -141,7 +141,6 @@ class BiPropertyWildCard(PropertyCard):
         self.assignedColor = None
 
     def assignProperty(self, color):
-        # I have to check that the color is in the available colors
         self.assignedColor = color
 
     def __repr__(self):
@@ -169,9 +168,7 @@ def initializeDeck():
     CARDS = []
 
     # initialize all cards...
-
     for _ in range(2):
-
         CARDS.append(DealBreaker(5))
         CARDS.append(DoubleTheRent(1))
         CARDS.append(PropertyCard(1, 'BROWN', (1, 2)))
@@ -188,7 +185,6 @@ def initializeDeck():
         CARDS.append(CashCard(5))
 
     for _ in range(3):
-
         CARDS.append(DebtCollector(3))
         CARDS.append(Hotel(4))
         CARDS.append(House(3))
@@ -206,20 +202,16 @@ def initializeDeck():
         CARDS.append(CashCard(3))
 
     for _ in range(4):
-
         CARDS.append(ForcedDeal(3))
         CARDS.append(PropertyCard(2, 'BLACK', (1, 2, 3, 4)))
 
     for _ in range(5):
-
         CARDS.append(CashCard(2))
         
     for _ in range(6):
-
         CARDS.append(CashCard(1))
 
     for _ in range(10):
-
         CARDS.append(PassGo(1))
         
     CARDS.append(BiPropertyWildCard(4, ('BLUE', 'GREEN'), None))
@@ -236,3 +228,4 @@ if __name__ == "__main__":
 
     deck = initializeDeck()
     pprint(deck)
+
