@@ -2,14 +2,15 @@ import random
 from pprint import pprint
 
 class Card:
-    """Super Class"""
-
     def __init__(self, value):
         self.value = value
         self._isPlayed = False
 
     def __repr__(self):
         return f'<{self.__class__.__name__}> Value = {self.value} M'
+
+    # TODO: Probably add a play method that takes a default arg,
+    # indicating the player(s) it's targeted to.
 
 
 class CashCard(Card):
